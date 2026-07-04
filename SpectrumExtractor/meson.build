@@ -15,11 +15,14 @@ py_sources = [
   'spectrum_extractor.py',
   'scattered_light_subtraction.py',
   'cosmic_ray_utils.py',
-  # <-- add the rest of your .py files here
+]
+
+package_data = [
+  'spectrum_extractor.config',
 ]
 
 py.install_sources(
-  py_sources,
+  py_sources + package_data,
   subdir: 'SpectrumExtractor',   # install into site-packages/SpectrumExtractor/
 )
 
